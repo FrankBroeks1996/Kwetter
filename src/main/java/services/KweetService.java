@@ -8,6 +8,7 @@ import model.User;
 import javax.ejb.EJB;
 import javax.ejb.Stateless;
 import java.util.List;
+import java.util.Set;
 
 @Stateless
 public class KweetService {
@@ -37,7 +38,7 @@ public class KweetService {
 
     public void editUser(User user){userDAO.editUser(user);}
 
-    public List<Kweet> getAllKweets(User user){
-        List<Kweet> kweets = kweetDAO.getAllUserKweets();
+    public Set<Kweet> getAllKweets(User user){
+        return user.getKweets();
     }
 }

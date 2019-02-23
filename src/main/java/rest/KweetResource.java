@@ -9,14 +9,12 @@ import services.KweetService;
 import services.UserService;
 
 import javax.ejb.EJB;
-import javax.ws.rs.Consumes;
-import javax.ws.rs.POST;
-import javax.ws.rs.Path;
-import javax.ws.rs.Produces;
+import javax.ws.rs.*;
 import javax.ws.rs.core.Context;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.SecurityContext;
 import java.security.Principal;
+import java.util.ArrayList;
 import java.util.List;
 
 @Path("kweet")
@@ -64,7 +62,7 @@ public class KweetResource {
         kweetService.removeKweet(kweet);
     }
 
-    @POST
+    @GET
     @Path("getAllKweets")
     @Produces(MediaType.APPLICATION_JSON)
     @JWTTokenNeeded
@@ -72,6 +70,11 @@ public class KweetResource {
         Principal principal = context.getUserPrincipal();
         User currentUser = userService.getUserByName(principal.getName());
 
+        List<KweetDTO> userKweetDtoList = new ArrayList<>();
+        for (Kweet kweet : kweetService.getAllKweets(currentUser)){
+            userKweetDtoList.add(new KweetDTO(kweet));
+        }
 
+        return userKweetDtoList;
     }
 }

@@ -7,6 +7,7 @@ import javax.enterprise.event.Event;
 import javax.inject.Inject;
 import javax.persistence.*;
 import java.util.List;
+import java.util.Set;
 import java.util.UUID;
 
 @Entity
@@ -44,9 +45,8 @@ public class User {
     @Enumerated
     private Role role;
 
-    @ManyToMany
-    @Column(name = "kweets")
-    private List<Kweet> kweets;
+    @OneToMany(mappedBy = "author", fetch = FetchType.EAGER)
+    private Set<Kweet> kweets;
 
     @ManyToMany(mappedBy = "mentions")
     private List<Kweet> mentionedIn;
@@ -132,11 +132,11 @@ public class User {
         this.role = role;
     }
 
-    public List<Kweet> getKweets() {
+    public Set<Kweet> getKweets() {
         return kweets;
     }
 
-    public void setKweets(List<Kweet> kweets) {
+    public void setKweets(Set<Kweet> kweets) {
         this.kweets = kweets;
     }
 
