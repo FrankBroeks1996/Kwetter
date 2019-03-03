@@ -1,8 +1,10 @@
 package services;
 
 import dao.UserDAO;
+import dao.UserDAOImpl;
 import model.User;
 
+import javax.ejb.EJB;
 import javax.ejb.Stateless;
 import javax.inject.Inject;
 import java.util.List;
@@ -10,7 +12,7 @@ import java.util.List;
 @Stateless
 public class UserService {
 
-    @Inject
+    @EJB
     private UserDAO userDAO;
 
     public void addUser(User user){

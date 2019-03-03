@@ -77,4 +77,20 @@ public class KweetResource {
 
         return userKweetDtoList;
     }
+
+    @GET
+    @Path("getDashboard")
+    @Produces(MediaType.APPLICATION_JSON)
+    @JWTTokenNeeded
+    public List<KweetDTO> getDashboard(){
+        Principal principal = context.getUserPrincipal();
+        User currentUser = userService.getUserByName(principal.getName());
+
+        List<KweetDTO> userDashboard = new ArrayList<>();
+        for (Kweet kweet : kweetService.getDashboard(currentUser)){
+            userDashboard.add(new KweetDTO(kweet));
+        }
+
+        return userDashboard;
+    }
 }

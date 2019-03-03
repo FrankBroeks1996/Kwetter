@@ -2,13 +2,15 @@ package services;
 
 import dao.KweetDAO;
 import dao.UserDAO;
+import dao.UserDAOImpl;
 import model.Kweet;
 import model.User;
 
 import javax.ejb.EJB;
 import javax.ejb.Stateless;
+import javax.inject.Inject;
+import java.util.ArrayList;
 import java.util.List;
-import java.util.Set;
 
 @Stateless
 public class KweetService {
@@ -36,9 +38,11 @@ public class KweetService {
         kweetDAO.removeKweet(kweet);
     }
 
-    public void editUser(User user){userDAO.editUser(user);}
-
-    public Set<Kweet> getAllKweets(User user){
+    public List<Kweet> getAllKweets(User user){
         return user.getKweets();
+    }
+
+    public List<Kweet> getDashboard(User user){
+        return kweetDAO.getDashboard(user);
     }
 }

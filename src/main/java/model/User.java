@@ -4,8 +4,11 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import dto.UserDTO;
 
 import javax.enterprise.event.Event;
+import javax.enterprise.inject.Default;
 import javax.inject.Inject;
 import javax.persistence.*;
+import javax.ws.rs.Consumes;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 import java.util.UUID;
@@ -24,7 +27,7 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
-    @Column(name = "username")
+    @Column(name = "username", unique = true)
     private String username;
 
     @Column(name = "password")
@@ -42,11 +45,11 @@ public class User {
     @Column(name = "profilePicturePath")
     private String profilePicturePath;
 
-    @Enumerated
+    @Enumerated(EnumType.STRING)
     private Role role;
 
     @OneToMany(mappedBy = "author", fetch = FetchType.EAGER)
-    private Set<Kweet> kweets;
+    private List<Kweet> kweets = new ArrayList<>();
 
     @ManyToMany(mappedBy = "mentions")
     private List<Kweet> mentionedIn;
@@ -54,16 +57,11 @@ public class User {
     @ManyToMany(fetch = FetchType.EAGER)
     @JsonIgnore
     @JoinTable(name = "following", joinColumns = @JoinColumn(name = "following_id"), inverseJoinColumns = @JoinColumn(name = "follower_id"))
-    private List<User> followers;
-
-//    @ManyToMany(fetch = FetchType.EAGER)
-//    @JsonIgnore
-//    @JoinTable(name = "followers", joinColumns = @JoinColumn(name = "follower_id"), inverseJoinColumns = @JoinColumn(name = "following_id"))
-//    private List<User> following;
+    private List<User> followers = new ArrayList<>();
 
     @ManyToMany(mappedBy = "followers", fetch = FetchType.EAGER)
     @JsonIgnore
-    private List<User> following;
+    private List<User> following = new ArrayList<>();
 
     public User() {
         //JPA empty constructor
@@ -83,6 +81,8 @@ public class User {
     public int getId() {
         return id;
     }
+
+    public void setId(int id){this.id = id;}
 
     public String getUsername() {
         return username;
@@ -132,11 +132,11 @@ public class User {
         this.role = role;
     }
 
-    public Set<Kweet> getKweets() {
+    public List<Kweet> getKweets() {
         return kweets;
     }
 
-    public void setKweets(Set<Kweet> kweets) {
+    public void setKweets(List<Kweet> kweets) {
         this.kweets = kweets;
     }
 

@@ -24,7 +24,7 @@ public class Kweet {
 
     @ManyToMany
     @JoinTable(name = "hearts", joinColumns = @JoinColumn(name = "kweet_id"), inverseJoinColumns = @JoinColumn(name = "user_id"))
-    private List<User> hearts;
+    private List<User> hearts = new ArrayList<>();
 
     @ManyToMany
     private List<User> mentions;
@@ -47,6 +47,8 @@ public class Kweet {
     public int getId() {
         return id;
     }
+
+    public void  setId(int id){this.id = id;}
 
     public String getMessage() {
         return message;

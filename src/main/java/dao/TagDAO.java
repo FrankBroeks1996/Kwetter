@@ -11,7 +11,7 @@ import java.util.List;
 @Stateless
 public class TagDAO {
 
-    @PersistenceContext(name = "kwetterPU")
+    @PersistenceContext(unitName = "kwetterPU")
     private EntityManager em;
 
     public void addTag(Tag tag){

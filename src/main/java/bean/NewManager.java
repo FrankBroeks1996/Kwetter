@@ -1,16 +1,12 @@
 package bean;
 
-import dao.UserDAO;
-import model.User;
-
 import javax.enterprise.inject.Model;
-import javax.inject.Inject;
 
 @Model
 public class NewManager {
 
 //    @Inject
-//    private UserDAO userDAO;
+//    private UserDAOImpl userDAO;
 //
 //    public void addUser(){
 //        User user = new User();
