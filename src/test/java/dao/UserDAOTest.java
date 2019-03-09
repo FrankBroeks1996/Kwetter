@@ -3,48 +3,51 @@ package dao;
 import model.User;
 import org.junit.Test;
 
-import static org.junit.Assert.*;
+import javax.ejb.EJB;
+
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 public class UserDAOTest {
 
-    private static UserDAO _userDAO;
-
-    protected static void setUserDAO(UserDAO u) {_userDAO = u;}
-
-    protected void refresh(Object object){}
-    protected void flush(){}
+    @EJB
+    private UserDAO _userDAO;
 
     @Test
     public void addUser() throws Exception {
         User user = new User();
-        user.setUsername("Username");
+        user.setUsername("Username1");
+        user.setBio("Bio");
         _userDAO.addUser(user);
 
-        assertEquals("Username", _userDAO.getUserByName("Username").getUsername());
+        assertEquals("Username1", _userDAO.getUserByName("Username1").getUsername());
+        assertEquals("Bio", _userDAO.getUserByName("Username1").getBio());
     }
 
     @Test
     public void editUser() throws Exception {
         User user = new User();
-        user.setUsername("Username");
+        user.setUsername("Username2");
+        user.setBio("Bio");
         _userDAO.addUser(user);
 
         user.setUsername("NewUsername");
         _userDAO.editUser(user);
 
         assertEquals("NewUsername", _userDAO.getUserByName("NewUsername").getUsername());
+        assertEquals("Bio", _userDAO.getUserByName("NewUsername").getBio());
 
     }
 
     @Test
     public void getUserByName() throws Exception {
         User user = new User();
-        user.setUsername("Username");
+        user.setUsername("Username3");
         _userDAO.addUser(user);
 
-        User user2 = _userDAO.getUserByName("Username");
+        User user2 = _userDAO.getUserByName("Username3");
 
-        assertEquals("Username", user2.getUsername());
+        assertEquals("Username3", user2.getUsername());
     }
 
     @Test
@@ -60,9 +63,6 @@ public class UserDAOTest {
 
         _userDAO.followUser(user1, user2);
 
-        user1 = _userDAO.getUserByName("User1");
-        user2 = _userDAO.getUserByName("User2");
-
         assertEquals(1, user2.getFollowers().size());
         assertEquals(0, user1.getFollowers().size());
     }
@@ -70,18 +70,15 @@ public class UserDAOTest {
     @Test
     public void getAllFollowers() throws Exception {
         User user1 = new User();
-        user1.setUsername("User1");
+        user1.setUsername("User3");
 
         User user2 = new User();
-        user2.setUsername("User2");
+        user2.setUsername("User4");
 
         _userDAO.addUser(user1);
         _userDAO.addUser(user2);
 
         _userDAO.followUser(user1, user2);
-
-        user1 = _userDAO.getUserByName("User1");
-        user2 = _userDAO.getUserByName("User2");
 
         assertEquals(1, user2.getFollowers().size());
     }
@@ -89,18 +86,17 @@ public class UserDAOTest {
     @Test
     public void getAllFollowing() throws Exception {
         User user1 = new User();
-        user1.setUsername("User1");
+        user1.setUsername("User5");
 
         User user2 = new User();
-        user2.setUsername("User2");
+        user2.setUsername("User6");
 
         _userDAO.addUser(user1);
         _userDAO.addUser(user2);
 
         _userDAO.followUser(user1, user2);
 
-        user1 = _userDAO.getUserByName("User1");
-        user2 = _userDAO.getUserByName("User2");
+        user1 = _userDAO.getUserByName("User5");
 
         assertEquals(1, _userDAO.getAllFollowing(user1).size());
     }
@@ -114,5 +110,4 @@ public class UserDAOTest {
 
         assertTrue(_userDAO.login(user1));
     }
-
 }

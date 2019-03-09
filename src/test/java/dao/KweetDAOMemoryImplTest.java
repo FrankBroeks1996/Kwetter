@@ -25,6 +25,8 @@ public class KweetDAOMemoryImplTest extends KweetDAOTest {
                 .addClass(Kweet.class)
                 .addClass(User.class)
                 .addClass(InMemoryDatabase.class)
+                .addClass(UserDAO.class)
+                .addClass(UserDAOMemoryImpl.class)
                 .addAsManifestResource(EmptyAsset.INSTANCE, "beans.xml");
     }
 

@@ -1,52 +1,37 @@
 package dao;
 
+import dto.KweetDTO;
+import dto.UserDTO;
+import model.Kweet;
+import model.Role;
+import model.Tag;
+import model.User;
+import org.jboss.arquillian.container.test.api.Deployment;
+import org.jboss.arquillian.junit.Arquillian;
+import org.jboss.shrinkwrap.api.ShrinkWrap;
+import org.jboss.shrinkwrap.api.asset.EmptyAsset;
+import org.jboss.shrinkwrap.api.spec.JavaArchive;
 import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
+import org.junit.runner.RunWith;
 
 import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.Persistence;
+import javax.persistence.PersistenceContext;
 
+@RunWith(Arquillian.class)
 public class UserDAOImplTest extends UserDAOTest {
-
-    private static EntityManagerFactory emf;
-    private static EntityManager em;
-
-    @BeforeClass
-    public static void init(){
-        emf = Persistence.createEntityManagerFactory("KwetterTestPU");
-    }
-
-    @AfterClass
-    public static void closeEntityManagerFactory() {
-        emf.close();
-    }
-
-    @Before
-    public void begin() {
-        em = emf.createEntityManager();
-        em.getTransaction().begin();
-
-        UserDAOImpl userDAO = new UserDAOImpl();
-        userDAO.setEm(em);
-        setUserDAO(userDAO);
-    }
-
-    @Override
-    public void refresh(Object object){
-        em.refresh(object);
-    }
-
-    @After
-    public void rollbackTransaction() {
-        if (em.getTransaction().isActive()) {
-            em.getTransaction().rollback();
-        }
-
-        if (em.isOpen()) {
-            em.close();
-        }
+    @Deployment
+    public static JavaArchive createDeployment() {
+        return ShrinkWrap.create(JavaArchive.class)
+                .addClass(UserDAO.class)
+                .addClass(UserDAOImpl.class)
+                .addClass(UserDAOTest.class)
+                .addClass(User.class)
+                .addClass(Role.class)
+                .addClass(Kweet.class)
+                .addClass(Tag.class)
+                .addClass(KweetDTO.class)
+                .addClass(UserDTO.class)
+                .addAsResource("test-persistence.xml", "META-INF/persistence.xml")
+                .addAsManifestResource(EmptyAsset.INSTANCE, "beans.xml");
     }
 }

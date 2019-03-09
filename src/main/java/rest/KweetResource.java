@@ -9,6 +9,7 @@ import services.KweetService;
 import services.UserService;
 
 import javax.ejb.EJB;
+import javax.ejb.Stateless;
 import javax.ws.rs.*;
 import javax.ws.rs.core.Context;
 import javax.ws.rs.core.MediaType;
@@ -18,6 +19,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Path("kweet")
+@Stateless
 public class KweetResource {
 
     @EJB

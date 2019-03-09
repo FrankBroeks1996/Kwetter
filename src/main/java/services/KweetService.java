@@ -15,10 +15,10 @@ import java.util.List;
 @Stateless
 public class KweetService {
 
-    @EJB
+    @EJB(beanName = "UserDAOImpl")
     private UserDAO userDAO;
 
-    @EJB
+    @EJB(beanName = "KweetDAOImpl")
     private KweetDAO kweetDAO;
 
     public void postKweet(String username, Kweet kweet){

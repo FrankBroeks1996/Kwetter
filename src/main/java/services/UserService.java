@@ -12,7 +12,7 @@ import java.util.List;
 @Stateless
 public class UserService {
 
-    @EJB
+    @EJB(beanName = "UserDAOImpl")
     private UserDAO userDAO;
 
     public void addUser(User user){

@@ -14,7 +14,7 @@ import java.util.List;
 
 @Stateless
 @Default
-//@Named("KweetDAOImpl")
+@Named("KweetDAOImpl")
 public class KweetDAOImpl implements KweetDAO {
 
     @PersistenceContext(unitName = "kwetterPU")

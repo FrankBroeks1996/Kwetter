@@ -102,6 +102,8 @@ public class KweetDAOTest {
         kweet3.setAuthor(user3);
         _kweetDAO.addKweet(kweet3);
 
+        user1 = _userDAO.getUserByName("User1");
+
         Assert.assertEquals(2, _kweetDAO.getDashboard(user1).size());
     }
 }

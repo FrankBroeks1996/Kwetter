@@ -14,7 +14,7 @@ import java.util.List;
 
 @Stateless
 @Default
-//@Named("UserDAOImpl")
+@Named("UserDAOImpl")
 public class UserDAOImpl implements UserDAO {
 
     @PersistenceContext(name = "kwetterPU")

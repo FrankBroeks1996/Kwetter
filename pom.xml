@@ -229,6 +229,11 @@
             <version>2.4.8.Final</version>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>org.jboss.arquillian.extension</groupId>
+            <artifactId>arquillian-rest-client-impl-jersey</artifactId>
+            <version>1.0.0.Alpha3</version>
+        </dependency>
 
         <dependency>
             <groupId>io.jsonwebtoken</groupId>
