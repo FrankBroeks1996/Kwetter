@@ -51,12 +51,21 @@ public class UserDAOImpl implements UserDAO {
         return user.getFollowing();
     }
 
+    public List<User> getAllUsers() {
+        return em.createNamedQuery("User.getAllUsers", User.class).getResultList();
+    }
+
     public boolean login(User user){
-        User u = em.createNamedQuery("User.login", User.class).setParameter("username", user.getUsername()).setParameter("password", user.getPassword()).getSingleResult();
-        if(u == null){
+        try {
+            User u = em.createNamedQuery("User.login", User.class).setParameter("username", user.getUsername()).setParameter("password", user.getPassword()).getSingleResult();
+            if (u == null) {
+                return false;
+            } else {
+                return true;
+            }
+        }
+        catch (Exception ex){
             return false;
-        }else{
-            return true;
         }
     }
 }

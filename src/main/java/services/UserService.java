@@ -38,4 +38,8 @@ public class UserService {
     public void followUser(User currentUser, User userToBeFollowed){
         userDAO.followUser(currentUser, userToBeFollowed);
     }
+
+    public List<User> getAllUsers(){
+        return userDAO.getAllUsers();
+    }
 }

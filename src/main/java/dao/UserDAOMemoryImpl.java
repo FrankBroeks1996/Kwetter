@@ -88,6 +88,11 @@ public class UserDAOMemoryImpl implements UserDAO {
     }
 
     @Override
+    public List<User> getAllUsers() {
+        return InMemoryDatabase.getUsers();
+    }
+
+    @Override
     public boolean login(User user) {
         for(User u : InMemoryDatabase.getUsers()){
             if(u.getUsername() == user.getUsername() && u.getPassword() == user.getPassword()){

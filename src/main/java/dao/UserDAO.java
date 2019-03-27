@@ -18,5 +18,7 @@ public interface UserDAO {
 
     List<User> getAllFollowing(User user);
 
+    List<User> getAllUsers();
+
     boolean login(User user);
 }
