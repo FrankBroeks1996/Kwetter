@@ -1,5 +1,6 @@
 package rest;
 
+import dto.RegisterDTO;
 import dto.UserDTO;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
@@ -35,11 +36,13 @@ public class AuthenticationResource {
     @Path("login")
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
-    public Response login(UserDTO userDTO){
+    public Response login(RegisterDTO registerDTO){
         try{
-            User user = new User(userDTO);
+            User user = new User();
+            user.setUsername(registerDTO.getUsername());
+            user.setPassword(registerDTO.getPassword());
             if(userService.login(user)) {
-                String token = issueToken(userDTO.getUsername());
+                String token = issueToken(user.getUsername());
 
                 return Response.ok().header(AUTHORIZATION, "Bearer " + token).header("Access-Control-Expose-Headers", "Authorization").build();
             }else{
@@ -47,6 +50,25 @@ public class AuthenticationResource {
             }
         }
         catch (Exception e){
+            e.printStackTrace();
+            return Response.status(UNAUTHORIZED).build();
+        }
+    }
+
+    @POST
+    @Path("register")
+    @Consumes(MediaType.APPLICATION_JSON)
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response register(RegisterDTO registerDTO){
+        try {
+            User user = new User();
+            user.setUsername(registerDTO.getUsername());
+            user.setPassword(registerDTO.getPassword());
+            userService.addUser(user);
+
+            String token = issueToken(user.getUsername());
+            return Response.ok().header(AUTHORIZATION, "Bearer " + token).header("Access-Control-Expose-Headers", "Authorization").build();
+        }catch (Exception e){
             e.printStackTrace();
             return Response.status(UNAUTHORIZED).build();
         }

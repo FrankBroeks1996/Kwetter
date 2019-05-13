@@ -1,6 +1,13 @@
 <component name="ArtifactManager">
   <artifact type="exploded-war" name="KwetterProject:war exploded">
     <output-path>$PROJECT_DIR$/target/Kwetter</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <exploded>true</exploded>
+        <module>KwetterProject</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
     <root id="root">
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
@@ -41,6 +48,7 @@
           <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.8.2" />
           <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.8.0" />
           <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-core:2.8.2" />
+          <element id="library" level="project" name="Maven: org.jboss.spec.javax.ws.rs:jboss-jaxrs-api_2.1_spec:1.0.1.Final" />
         </element>
       </element>
       <element id="directory" name="META-INF">

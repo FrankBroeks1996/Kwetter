@@ -10,7 +10,9 @@ import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
 import javax.persistence.TypedQuery;
 import javax.transaction.Transactional;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 @Stateless
 @Default
@@ -43,16 +45,34 @@ public class UserDAOImpl implements UserDAO {
         em.merge(userToBeFollowed);
     }
 
-    public List<User> getAllFollowers(User user){
+    public void unFollowUser(User currentUser, User userToBeUnFollowed) {
+        userToBeUnFollowed.getFollowers().removeIf( f -> f.getId() == currentUser.getId() );
+        em.merge(userToBeUnFollowed);
+    }
+
+    public Set<User> getAllFollowers(User user){
         return user.getFollowers();
     }
 
-    public List<User> getAllFollowing(User user){
+    public Set<User> getAllFollowing(User user){
         return user.getFollowing();
     }
 
     public List<User> getAllUsers() {
         return em.createNamedQuery("User.getAllUsers", User.class).getResultList();
+    }
+
+    public boolean isFollowing(User currentUser, User checkUser){
+        try {
+            User user = em.createNamedQuery("User.isFollowing", User.class).setParameter("username", currentUser.getUsername()).setParameter("checkUser", checkUser).getSingleResult();
+            if (user == null) {
+                return false;
+            }
+            return true;
+        }catch(Exception e){
+            e.printStackTrace();
+            return false;
+        }
     }
 
     public boolean login(User user){

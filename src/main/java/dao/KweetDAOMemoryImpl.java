@@ -80,7 +80,12 @@ public class KweetDAOMemoryImpl implements KweetDAO {
     }
 
     @Override
-    public List<Kweet> getDashboard(User user) {
+    public List<Kweet> getAllUserKweets(User user) {
+        return null;
+    }
+
+    @Override
+    public List<Kweet> getDashboard(User user, int resultPage, int resultSize) {
         List<Kweet> kweets = new ArrayList<>();
         kweets.addAll(user.getKweets());
 
@@ -89,5 +94,10 @@ public class KweetDAOMemoryImpl implements KweetDAO {
         }
 
         return kweets;
+    }
+
+    @Override
+    public List<Kweet> getSearchResult(String searchQuery, int resultPage, int resultSize) {
+        return null;
     }
 }

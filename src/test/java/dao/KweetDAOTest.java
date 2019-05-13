@@ -104,6 +104,6 @@ public class KweetDAOTest {
 
         user1 = _userDAO.getUserByName("User1");
 
-        Assert.assertEquals(2, _kweetDAO.getDashboard(user1).size());
+        Assert.assertEquals(2, _kweetDAO.getDashboard(user1, 1, 10).size());
     }
 }

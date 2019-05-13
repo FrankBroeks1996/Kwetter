@@ -36,7 +36,7 @@ public class KweetOverviewManager {
         FacesContext context = FacesContext.getCurrentInstance();
 
         user = userService.getUserByName(context.getExternalContext().getSessionMap().get("selectedUser").toString());
-        kweetList = kweetService.getAllKweets(user);
+        kweetList = kweetService.getAllUserKweets(user);
     }
 
     public void deleteKweet(Kweet kweet){

@@ -8,17 +8,15 @@ import javax.enterprise.inject.Default;
 import javax.inject.Inject;
 import javax.persistence.*;
 import javax.ws.rs.Consumes;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Set;
-import java.util.UUID;
+import java.util.*;
 
 @Entity
 @Table(name = "USER")
 @NamedQueries({
     @NamedQuery(name = "User.getUserByName", query = "SELECT u FROM User u WHERE u.username = :name"),
     @NamedQuery(name = "User.getAllUsers", query = "SELECT u FROM User u"),
-    @NamedQuery(name = "User.login", query = "SELECT u FROM User u WHERE u.username = :username AND u.password = :password")
+    @NamedQuery(name = "User.login", query = "SELECT u FROM User u WHERE u.username = :username AND u.password = :password"),
+    @NamedQuery(name = "User.isFollowing", query = "SELECT u FROM User u WHERE u.username = :username AND :checkUser MEMBER OF u.following")
 })
 public class User {
 
@@ -57,11 +55,11 @@ public class User {
     @ManyToMany(fetch = FetchType.EAGER)
     @JsonIgnore
     @JoinTable(name = "following", joinColumns = @JoinColumn(name = "following_id"), inverseJoinColumns = @JoinColumn(name = "follower_id"))
-    private List<User> followers = new ArrayList<>();
+    private Set<User> followers = new HashSet<>();
 
     @ManyToMany(mappedBy = "followers", fetch = FetchType.EAGER)
     @JsonIgnore
-    private List<User> following = new ArrayList<>();
+    private Set<User> following = new HashSet<>();
 
     public User() {
         //JPA empty constructor
@@ -70,7 +68,7 @@ public class User {
     public User(UserDTO userDTO){
         this.id = userDTO.getId();
         this.username = userDTO.getUsername();
-        this.password = userDTO.getPassword();
+        //this.password = userDTO.getPassword();
         this.location = userDTO.getLocation();
         this.website = userDTO.getWebsite();
         this.bio = userDTO.getBio();
@@ -140,19 +138,19 @@ public class User {
         this.kweets = kweets;
     }
 
-    public List<User> getFollowers() {
+    public Set<User> getFollowers() {
         return followers;
     }
 
-    public void setFollowers(List<User> followers) {
+    public void setFollowers(Set<User> followers) {
         this.followers = followers;
     }
 
-    public List<User> getFollowing() {
+    public Set<User> getFollowing() {
         return following;
     }
 
-    public void setFollowing(List<User> following) {
+    public void setFollowing(Set<User> following) {
         this.following = following;
     }
 

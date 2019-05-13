@@ -1,5 +1,6 @@
 package rest;
 
+import dto.RegisterDTO;
 import dto.UserDTO;
 import model.User;
 import security.JWTTokenNeeded;
@@ -10,6 +11,7 @@ import javax.print.attribute.standard.MediaPrintableArea;
 import javax.ws.rs.*;
 import javax.ws.rs.core.Context;
 import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.Response;
 import javax.ws.rs.core.SecurityContext;
 import java.security.Principal;
 import java.util.ArrayList;
@@ -26,42 +28,67 @@ public class UserResource {
 
     public UserResource(){}
 
-    @POST
-    @Path("addUser")
-    @Consumes(MediaType.APPLICATION_JSON)
-    public void addUser(UserDTO userDTO){
-        User user = new User(userDTO);
-        userService.addUser(user);
-    }
-
     @GET
-    @Path("getUserByName")
+    @Path("getUserByName/{username}")
     @Produces(MediaType.APPLICATION_JSON)
     @JWTTokenNeeded
-    public UserDTO getUserByName(){
-        UserDTO userDTO = new UserDTO(userService.getUserByName("TestUser"));
+    public UserDTO getUserByName(@PathParam("username") String username){
+        UserDTO userDTO = new UserDTO(userService.getUserByName(username));
         return userDTO;
     }
 
-    @POST
+    @PATCH
     @Path("editUser")
     @Consumes(MediaType.APPLICATION_JSON)
+    @Produces(MediaType.APPLICATION_JSON)
     @JWTTokenNeeded
-    public void editUser(UserDTO userDTO){
-        User user = new User(userDTO);
-        userService.editUser(user);
+    public Response editUser(UserDTO userDTO){
+        try {
+            User user = userService.getUserByName(userDTO.getUsername());
+            user.setBio(userDTO.getBio());
+            user.setLocation(userDTO.getLocation());
+            user.setWebsite(userDTO.getWebsite());
+            userService.editUser(user);
+            userDTO = new UserDTO(user);
+            return Response.ok().entity(userDTO).build();
+        }catch (Exception e){
+            e.printStackTrace();
+            return Response.status(500).build();
+        }
     }
 
     @POST
-    @Path("followUser")
-    @Consumes(MediaType.APPLICATION_JSON)
+    @Path("followUser/{username}")
     @JWTTokenNeeded
-    public void followUser(UserDTO userDTO){
+    public void followUser(@PathParam("username") String username){
         Principal principal = context.getUserPrincipal();
         User currentUser = userService.getUserByName(principal.getName());
-        User userToBeFollowed = userService.getUserByName(userDTO.getUsername());
+        User userToBeFollowed = userService.getUserByName(username);
 
         userService.followUser(currentUser, userToBeFollowed);
+    }
+
+    @POST
+    @Path("unFollowUser/{username}")
+    @JWTTokenNeeded
+    public void unFollowUser(@PathParam("username") String username){
+        Principal principal = context.getUserPrincipal();
+        User currentUser = userService.getUserByName(principal.getName());
+        User userToBeUnfollowed = userService.getUserByName(username);
+
+        userService.unFollowUser(currentUser, userToBeUnfollowed);
+    }
+
+    @GET
+    @Path("isFollowing/{username}")
+    @JWTTokenNeeded
+    @Produces(MediaType.APPLICATION_JSON)
+    public boolean isFollowing(@PathParam("username") String username){
+        Principal principal = context.getUserPrincipal();
+        User currentUser = userService.getUserByName(principal.getName());
+        User checkUser = userService.getUserByName(username);
+
+        return userService.isFollowing(currentUser, checkUser);
     }
 
     @POST
@@ -73,12 +100,11 @@ public class UserResource {
     }
 
     @GET
-    @Path("getFollowing")
+    @Path("getFollowing/{username}")
     @Produces(MediaType.APPLICATION_JSON)
     @JWTTokenNeeded
-    public List<UserDTO> getAllFollowing(){
-        Principal principal = context.getUserPrincipal();
-        User currentUser = userService.getUserByName(principal.getName());
+    public List<UserDTO> getAllFollowing(@PathParam("username") String username){
+        User currentUser = userService.getUserByName(username);
 
         List<UserDTO> usersFollowingDtoList = new ArrayList<>();
         for (User user : userService.getAllFollowing(currentUser)){
@@ -89,12 +115,11 @@ public class UserResource {
     }
 
     @GET
-    @Path("getFollowers")
+    @Path("getFollowers/{username}")
     @Produces(MediaType.APPLICATION_JSON)
     @JWTTokenNeeded
-    public List<UserDTO> getAllFollowers(){
-        Principal principal = context.getUserPrincipal();
-        User currentUser = userService.getUserByName(principal.getName());
+    public List<UserDTO> getAllFollowers(@PathParam("username") String username){
+        User currentUser = userService.getUserByName(username);
 
         List<UserDTO> usersFollowerDtoList = new ArrayList<>();
         for (User user : userService.getAllFollowers(currentUser)){

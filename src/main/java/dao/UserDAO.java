@@ -3,6 +3,7 @@ package dao;
 import model.User;
 
 import java.util.List;
+import java.util.Set;
 
 public interface UserDAO {
 
@@ -14,11 +15,15 @@ public interface UserDAO {
 
     void followUser(User currentUser, User userToBeFollowed);
 
-    List<User> getAllFollowers(User user);
+    void unFollowUser(User currentUser, User userToBeUnFollowed);
 
-    List<User> getAllFollowing(User user);
+    Set<User> getAllFollowers(User user);
+
+    Set<User> getAllFollowing(User user);
 
     List<User> getAllUsers();
+
+    boolean isFollowing(User currentUser, User checkUser);
 
     boolean login(User user);
 }

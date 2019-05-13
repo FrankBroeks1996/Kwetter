@@ -3,6 +3,9 @@
   <component name="FacetManager">
     <facet type="web" name="Web">
       <configuration>
+        <descriptors>
+          <deploymentDescriptor name="jboss-web.xml" url="file://$MODULE_DIR$/src/main/webapp/WEB-INF/jboss-web.xml" />
+        </descriptors>
         <webroots>
           <root url="file://$MODULE_DIR$/src/main/webapp" relative="/" />
         </webroots>
@@ -16,12 +19,12 @@
     <facet type="jpa" name="JPA">
       <configuration>
         <setting name="validation-enabled" value="true" />
-        <setting name="provider-name" value="" />
         <datasource-mapping>
           <factory-entry name="KwetterTestPU" />
           <factory-entry name="kwetterPU" />
           <factory-entry name="primary" />
         </datasource-mapping>
+        <naming-strategy-map />
         <deploymentDescriptor name="persistence.xml" url="file://$MODULE_DIR$/src/main/resources/META-INF/persistence.xml" />
       </configuration>
     </facet>
@@ -112,5 +115,6 @@
     <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.8.2" level="project" />
     <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.8.0" level="project" />
     <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-core:2.8.2" level="project" />
+    <orderEntry type="library" name="Maven: org.jboss.spec.javax.ws.rs:jboss-jaxrs-api_2.1_spec:1.0.1.Final" level="project" />
   </component>
 </module>

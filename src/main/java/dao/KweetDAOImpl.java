@@ -20,10 +20,6 @@ public class KweetDAOImpl implements KweetDAO {
     @PersistenceContext(unitName = "kwetterPU")
     private EntityManager em;
 
-    public void setEm(EntityManager em){
-        this.em = em;
-    }
-
     public void addKweet(Kweet kweet){
         em.persist(kweet);
     }
@@ -45,14 +41,24 @@ public class KweetDAOImpl implements KweetDAO {
         kweet.getHearts().add(user);
     }
 
-    public List<Kweet> getDashboard(User user){
-        List<Kweet> kweets = new ArrayList<>();
-        kweets.addAll(user.getKweets());
+    public List<Kweet> getAllUserKweets(User user){
+        return em.createNamedQuery("Kweet.getAllUserKweets", Kweet.class)
+                .setParameter("user", user)
+                .getResultList();
+    }
 
-        for (User u : user.getFollowing()){
-            kweets.addAll(u.getKweets());
-        }
+    public List<Kweet> getDashboard(User user, int resultPage, int resultSize){
+        return em.createNamedQuery("Kweet.getDashboard", Kweet.class)
+                .setFirstResult((resultPage-1) * resultSize)
+                .setMaxResults(resultSize)
+                .setParameter("currentUser", user)
+                .getResultList();
+    }
 
-        return kweets;
+    public List<Kweet> getSearchResult(String searchQuery, int resultPage, int resultSize){
+        return em.createNamedQuery("Kweet.searchKweets", Kweet.class)
+                .setFirstResult((resultPage-1) * resultSize)
+                .setMaxResults(resultSize)
+                .setParameter("searchQuery", "%" + searchQuery + "%").getResultList();
     }
 }

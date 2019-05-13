@@ -134,12 +134,12 @@ public class KweetServiceTest {
         kweet2.setMessage("Kweet2");
         _kweetService.postKweet("User2", kweet2);
 
-        assertEquals(1, _kweetService.getDashboard(user1).size());
+        assertEquals(1, _kweetService.getDashboard(user1, 1, 10).size());
 
         _userDAO.followUser(user1, user2);
 
-        assertEquals(2, _kweetService.getDashboard(user1).size());
-        assertEquals(1, _kweetService.getDashboard(user2).size());
+        assertEquals(2, _kweetService.getDashboard(user1, 1, 10).size());
+        assertEquals(1, _kweetService.getDashboard(user2, 1, 10).size());
     }
 
     @After

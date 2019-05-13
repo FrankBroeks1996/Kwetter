@@ -1,16 +1,21 @@
 package model;
 
 import dto.KweetDTO;
+import org.hibernate.annotations.CreationTimestamp;
 
 import javax.persistence.*;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.UUID;
 
 @Entity
 @Table(name = "KWEET")
 @NamedQueries({
-        @NamedQuery(name = "Kweet.getKweetById", query = "SELECT k FROM Kweet k WHERE k.id = :id")
+        @NamedQuery(name = "Kweet.getKweetById", query = "SELECT k FROM Kweet k WHERE k.id = :id"),
+        @NamedQuery(name = "Kweet.getAllUserKweets", query = "SELECT k FROM Kweet k WHERE k.author = :user ORDER BY k.createdAt DESC"),
+        @NamedQuery(name = "Kweet.getDashboard", query = "SELECT k FROM Kweet k WHERE :currentUser = k.author OR :currentUser MEMBER OF k.author.followers ORDER BY k.createdAt DESC"),
+        @NamedQuery(name = "Kweet.searchKweets", query = "SELECT k FROM Kweet k WHERE k.message LIKE :searchQuery ORDER BY k.createdAt DESC"),
 })
 public class Kweet {
 
@@ -34,6 +39,9 @@ public class Kweet {
 
     @ManyToMany
     private List<Tag> tags;
+
+    @CreationTimestamp
+    private Date createdAt;
 
     public Kweet(){
         //Empty constructor for JPA

@@ -13,6 +13,7 @@ import javax.ejb.Stateless;
 import javax.ws.rs.*;
 import javax.ws.rs.core.Context;
 import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.Response;
 import javax.ws.rs.core.SecurityContext;
 import java.security.Principal;
 import java.util.ArrayList;
@@ -35,12 +36,22 @@ public class KweetResource {
     @Path("post")
     @Consumes(MediaType.APPLICATION_JSON)
     @JWTTokenNeeded
-    public void postKweet(KweetDTO kweetDTO){
-        Principal principal = context.getUserPrincipal();
-        String username = principal.getName();
-        Kweet kweet = new Kweet(kweetDTO);
+    public Response postKweet(KweetDTO kweetDTO){
+        try {
+            Principal principal = context.getUserPrincipal();
+            String username = principal.getName();
+            Kweet kweet = new Kweet(kweetDTO);
 
-        kweetService.postKweet(username, kweet);
+            kweetService.postKweet(username, kweet);
+
+            KweetDTO returnDto = new KweetDTO(kweet);
+
+            return Response.ok().entity(returnDto).build();
+        }
+        catch (Exception e){
+            e.printStackTrace();
+            return Response.status(500).build();
+        }
     }
 
     @POST
@@ -65,15 +76,14 @@ public class KweetResource {
     }
 
     @GET
-    @Path("getAllKweets")
+    @Path("getAllKweets/{username}")
     @Produces(MediaType.APPLICATION_JSON)
     @JWTTokenNeeded
-    public List<KweetDTO> getAllKweets(){
-        Principal principal = context.getUserPrincipal();
-        User currentUser = userService.getUserByName(principal.getName());
+    public List<KweetDTO> getAllKweets(@PathParam("username")String username){
+        User currentUser = userService.getUserByName(username);
 
         List<KweetDTO> userKweetDtoList = new ArrayList<>();
-        for (Kweet kweet : kweetService.getAllKweets(currentUser)){
+        for (Kweet kweet : kweetService.getAllUserKweets(currentUser)){
             userKweetDtoList.add(new KweetDTO(kweet));
         }
 
@@ -84,15 +94,27 @@ public class KweetResource {
     @Path("getDashboard")
     @Produces(MediaType.APPLICATION_JSON)
     @JWTTokenNeeded
-    public List<KweetDTO> getDashboard(){
+    public List<KweetDTO> getDashboard(@QueryParam("resultPage") int resultPage, @QueryParam("resultSize") int resultSize){
         Principal principal = context.getUserPrincipal();
         User currentUser = userService.getUserByName(principal.getName());
 
         List<KweetDTO> userDashboard = new ArrayList<>();
-        for (Kweet kweet : kweetService.getDashboard(currentUser)){
+        for (Kweet kweet : kweetService.getDashboard(currentUser, resultPage, resultSize)){
             userDashboard.add(new KweetDTO(kweet));
         }
 
         return userDashboard;
+    }
+
+    @GET
+    @Path("search/{searchQuery}")
+    @Produces(MediaType.APPLICATION_JSON)
+    public List<KweetDTO> search(@PathParam("searchQuery") String searchQuery, @QueryParam("resultPage") int resultPage, @QueryParam("resultSize") int resultSize){
+        List<KweetDTO> searchResult = new ArrayList<>();
+        for (Kweet kweet : kweetService.getSearchResult(searchQuery, resultPage, resultSize)){
+            searchResult.add(new KweetDTO(kweet));
+        }
+
+        return searchResult;
     }
 }

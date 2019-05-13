@@ -3,6 +3,7 @@ package bean;
 import callbackhandler.LoginCallBackHandler;
 import dao.UserDAO;
 import dao.UserDAOImpl;
+import dto.RegisterDTO;
 import dto.UserDTO;
 import model.User;
 import services.UserService;
@@ -29,11 +30,11 @@ public class LoginManager {
 
     @Produces
     @Named
-    private UserDTO currentUser;
+    private RegisterDTO currentUser;
 
     @PostConstruct
     void initUserDTO(){
-        currentUser = new UserDTO();
+        currentUser = new RegisterDTO();
     }
 
     public void login(){

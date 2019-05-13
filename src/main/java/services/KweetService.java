@@ -38,11 +38,13 @@ public class KweetService {
         kweetDAO.removeKweet(kweet);
     }
 
-    public List<Kweet> getAllKweets(User user){
-        return user.getKweets();
+    public List<Kweet> getAllUserKweets(User user){
+        return kweetDAO.getAllUserKweets(user);
     }
 
-    public List<Kweet> getDashboard(User user){
-        return kweetDAO.getDashboard(user);
+    public List<Kweet> getDashboard(User user, int resultPage, int resultSize){
+        return kweetDAO.getDashboard(user, resultPage, resultSize);
     }
+
+    public List<Kweet> getSearchResult(String searchQuery, int resultPage, int resultSize){return kweetDAO.getSearchResult(searchQuery, resultPage, resultSize);}
 }

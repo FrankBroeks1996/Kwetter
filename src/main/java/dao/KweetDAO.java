@@ -16,5 +16,9 @@ public interface KweetDAO {
 
     void heartKweet(User user, Kweet kweet);
 
-    List<Kweet> getDashboard(User user);
+    List<Kweet> getAllUserKweets(User user);
+
+    List<Kweet> getDashboard(User user, int resultPage, int resultSize);
+
+    List<Kweet> getSearchResult(String searchQuery, int resultPage, int resultSize);
 }

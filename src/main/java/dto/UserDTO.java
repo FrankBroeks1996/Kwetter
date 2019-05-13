@@ -12,7 +12,7 @@ public class UserDTO {
 
     private String username;
 
-    private String password;
+    //private String password;
 
     private String location;
 
@@ -33,7 +33,7 @@ public class UserDTO {
     public UserDTO(User user){
         this.id = user.getId();
         this.username = user.getUsername();
-        this.password = user.getPassword();
+        //this.password = user.getPassword();
         this.location = user.getLocation();
         this.website = user.getWebsite();
         this.bio = user.getBio();
@@ -113,11 +113,11 @@ public class UserDTO {
         this.mentionedIn = mentionedIn;
     }
 
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
+//    public String getPassword() {
+//        return password;
+//    }
+//
+//    public void setPassword(String password) {
+//        this.password = password;
+//    }
 }

@@ -2,12 +2,14 @@ package dao;
 
 import memory.InMemoryDatabase;
 import model.User;
+import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
 import javax.ejb.EJB;
 import javax.ejb.Stateless;
 import javax.enterprise.inject.Alternative;
 import javax.inject.Inject;
 import java.util.List;
+import java.util.Set;
 
 @Stateless
 @Alternative
@@ -68,7 +70,12 @@ public class UserDAOMemoryImpl implements UserDAO {
     }
 
     @Override
-    public List<User> getAllFollowers(User user) {
+    public void unFollowUser(User currentUser, User userToBeUnFollowed) {
+        throw new NotImplementedException();
+    }
+
+    @Override
+    public Set<User> getAllFollowers(User user) {
         for(User u : InMemoryDatabase.getUsers()){
             if(u.getId() == user.getId()){
                 return u.getFollowers();
@@ -78,7 +85,7 @@ public class UserDAOMemoryImpl implements UserDAO {
     }
 
     @Override
-    public List<User> getAllFollowing(User user) {
+    public Set<User> getAllFollowing(User user) {
         for(User u : InMemoryDatabase.getUsers()){
             if(u.getId() == user.getId()){
                 return u.getFollowing();
@@ -90,6 +97,11 @@ public class UserDAOMemoryImpl implements UserDAO {
     @Override
     public List<User> getAllUsers() {
         return InMemoryDatabase.getUsers();
+    }
+
+    @Override
+    public boolean isFollowing(User currentUser, User checkUser) {
+        return false;
     }
 
     @Override
