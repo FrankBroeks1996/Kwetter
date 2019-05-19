@@ -5,6 +5,7 @@ import model.Kweet;
 import model.User;
 import org.jboss.logging.annotations.Pos;
 import security.JWTTokenNeeded;
+import servers.KweetServer;
 import services.KweetService;
 import services.UserService;
 
@@ -29,12 +30,16 @@ public class KweetResource {
     @EJB
     private UserService userService;
 
+    @EJB
+    private KweetServer kweetServer;
+
     @Context
     private SecurityContext context;
 
     @POST
     @Path("post")
     @Consumes(MediaType.APPLICATION_JSON)
+    @Produces(MediaType.APPLICATION_JSON)
     @JWTTokenNeeded
     public Response postKweet(KweetDTO kweetDTO){
         try {
@@ -45,6 +50,8 @@ public class KweetResource {
             kweetService.postKweet(username, kweet);
 
             KweetDTO returnDto = new KweetDTO(kweet);
+
+            kweetServer.spreadKweet(returnDto);
 
             return Response.ok().entity(returnDto).build();
         }

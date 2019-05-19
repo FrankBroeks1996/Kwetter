@@ -7,71 +7,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a1ec85e5-6ef9-41d8-8d6f-e75271b9054c" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_spec_javax_ws_rs_jboss_jaxrs_api_2_1_spec_1_0_1_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dto/RegisterDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/KwetterProject_war.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/KwetterProject_war.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_gson_gson_2_8_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/servers/KweetServer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/artifacts/KwetterProject_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/KwetterProject_war_exploded.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/KwetterProject.iml" beforeDir="false" afterPath="$PROJECT_DIR$/KwetterProject.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/bean/KweetOverviewManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bean/KweetOverviewManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/bean/LoginManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bean/LoginManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/callbackhandler/LoginCallBackHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/callbackhandler/LoginCallBackHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/KweetDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/KweetDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/KweetDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/KweetDAOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/KweetDAOMemoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/KweetDAOMemoryImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/UserDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/UserDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/UserDAOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/UserDAOMemoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/UserDAOMemoryImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dto/KweetDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dto/KweetDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dto/UserDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dto/UserDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/Kweet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Kweet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rest/AuthenticationResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rest/AuthenticationResource.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/rest/KweetResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rest/KweetResource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rest/UserResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rest/UserResource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/routing/CorsFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/routing/CorsFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/services/KweetService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/KweetService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/dao/KweetDAOTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/dao/KweetDAOTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/services/KweetServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/services/KweetServiceTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/Kwetter.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/Kwetter.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Kwetter/WEB-INF/classes/bean/LoginManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Kwetter/WEB-INF/classes/bean/LoginManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Kwetter/WEB-INF/classes/callbackhandler/LoginCallBackHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Kwetter/WEB-INF/classes/callbackhandler/LoginCallBackHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Kwetter/WEB-INF/classes/dao/KweetDAOImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Kwetter/WEB-INF/classes/dao/KweetDAOImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Kwetter/WEB-INF/classes/dao/KweetDAOMemoryImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Kwetter/WEB-INF/classes/dao/KweetDAOMemoryImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Kwetter/WEB-INF/classes/dao/UserDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Kwetter/WEB-INF/classes/dao/UserDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Kwetter/WEB-INF/classes/dao/UserDAOImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Kwetter/WEB-INF/classes/dao/UserDAOImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Kwetter/WEB-INF/classes/dao/UserDAOMemoryImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Kwetter/WEB-INF/classes/dao/UserDAOMemoryImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Kwetter/WEB-INF/classes/dto/KweetDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Kwetter/WEB-INF/classes/dto/KweetDTO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Kwetter/WEB-INF/classes/dto/UserDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Kwetter/WEB-INF/classes/dto/UserDTO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Kwetter/WEB-INF/classes/model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Kwetter/WEB-INF/classes/model/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Kwetter/WEB-INF/classes/model/User_.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Kwetter/WEB-INF/classes/model/User_.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Kwetter/WEB-INF/classes/rest/AuthenticationResource.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Kwetter/WEB-INF/classes/rest/AuthenticationResource.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Kwetter/WEB-INF/classes/rest/KweetResource.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Kwetter/WEB-INF/classes/rest/KweetResource.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Kwetter/WEB-INF/classes/rest/UserResource.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Kwetter/WEB-INF/classes/rest/UserResource.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Kwetter/WEB-INF/classes/routing/CorsFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Kwetter/WEB-INF/classes/routing/CorsFilter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Kwetter/WEB-INF/classes/services/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Kwetter/WEB-INF/classes/services/UserService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/bean/LoginManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/bean/LoginManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/callbackhandler/LoginCallBackHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/callbackhandler/LoginCallBackHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dao/KweetDAOImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dao/KweetDAOImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dao/KweetDAOMemoryImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dao/KweetDAOMemoryImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dao/UserDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dao/UserDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dao/UserDAOImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dao/UserDAOImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dao/UserDAOMemoryImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dao/UserDAOMemoryImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dto/KweetDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dto/KweetDTO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dto/UserDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dto/UserDTO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/User_.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/User_.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/rest/AuthenticationResource.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/rest/AuthenticationResource.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/rest/KweetResource.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/rest/KweetResource.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/rest/UserResource.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/rest/UserResource.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/routing/CorsFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/routing/CorsFilter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/services/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/services/UserService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/annotations/model/User_.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/model/User_.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/dao/UserDAOTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/dao/UserDAOTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/services/UserServiceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/services/UserServiceTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Kwetter/WEB-INF/classes/model/Kweet_.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Kwetter/WEB-INF/classes/model/Kweet_.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -93,10 +37,37 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/rest/UserResource.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/services/KweetService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="275">
-              <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
+            <state relative-caret-position="600">
+              <caret line="41" column="45" selection-start-line="41" selection-start-column="45" selection-end-line="41" selection-end-column="45" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/rest/KweetResource.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-908">
+              <caret line="41" column="40" selection-start-line="41" selection-start-column="40" selection-end-line="41" selection-end-column="40" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/model/Kweet.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="25" selection-start-line="25" selection-end-line="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/servers/KweetServer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="355">
+              <caret line="36" column="45" selection-start-line="36" selection-start-column="45" selection-end-line="36" selection-end-column="45" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -105,92 +76,37 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/dao/KweetDAOImpl.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/rest/AuthenticationResource.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="292">
-              <caret line="43" column="11" selection-start-line="43" selection-start-column="11" selection-end-line="43" selection-end-column="50" />
+            <state relative-caret-position="800">
+              <caret line="61" column="28" selection-start-line="61" selection-start-column="28" selection-end-line="61" selection-end-column="28" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/dao/KweetDAOMemoryImpl.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/dto/KweetDTO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
-              <caret line="93" column="9" lean-forward="true" selection-start-line="93" selection-start-column="9" selection-end-line="93" selection-end-column="9" />
-              <folding>
-                <element signature="e#2094#2095#0" expanded="true" />
-                <element signature="e#2121#2122#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="140">
+              <caret line="7" column="26" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="26" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/dao/KweetDAO.java">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="18" column="44" selection-start-line="18" selection-start-column="44" selection-end-line="18" selection-end-column="44" />
+            <state relative-caret-position="352">
+              <caret line="254" selection-start-line="254" selection-end-line="254" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/rest/KweetResource.java">
+        <entry file="file://$PROJECT_DIR$/src/test/java/dao/KweetDAOImplTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="232">
-              <caret line="82" column="54" lean-forward="true" selection-start-line="82" selection-start-column="54" selection-end-line="82" selection-end-column="54" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/services/UserService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="132">
-              <caret line="23" column="18" lean-forward="true" selection-start-line="23" selection-start-column="18" selection-end-line="23" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/services/KweetService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="292">
-              <caret line="41" column="45" selection-start-line="41" selection-start-column="45" selection-end-line="41" selection-end-column="45" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/model/Kweet.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
-              <caret line="15" column="135" selection-start-line="15" selection-start-column="135" selection-end-line="15" selection-end-column="135" />
-              <folding>
-                <element signature="e#1095#1096#0" expanded="true" />
-                <element signature="e#1120#1121#0" expanded="true" />
-                <element signature="e#1201#1202#0" expanded="true" />
-                <element signature="e#1231#1232#0" expanded="true" />
-                <element signature="e#1277#1278#0" expanded="true" />
-                <element signature="e#1315#1316#0" expanded="true" />
-                <element signature="e#1352#1353#0" expanded="true" />
-                <element signature="e#1381#1382#0" expanded="true" />
-                <element signature="e#1420#1421#0" expanded="true" />
-                <element signature="e#1451#1452#0" expanded="true" />
-                <element signature="e#1499#1500#0" expanded="true" />
-                <element signature="e#1535#1536#0" expanded="true" />
-                <element signature="e#1587#1588#0" expanded="true" />
-                <element signature="e#1627#1628#0" expanded="true" />
-                <element signature="e#1658#1659#0" expanded="true" />
-                <element signature="e#1687#1688#0" expanded="true" />
-                <element signature="e#1729#1730#0" expanded="true" />
-                <element signature="e#1765#1766#0" expanded="true" />
-                <element signature="e#1799#1800#0" expanded="true" />
-                <element signature="e#1826#1827#0" expanded="true" />
-                <element signature="e#1869#1870#0" expanded="true" />
-                <element signature="e#1901#1902#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="100">
+              <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -198,7 +114,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/bean/KweetOverviewManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="400">
+            <state relative-caret-position="520">
               <caret line="38" column="43" selection-start-line="38" selection-start-column="43" selection-end-line="38" selection-end-column="43" />
             </state>
           </provider>
@@ -258,7 +174,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/memory/InMemoryDatabase.java" />
         <option value="$MAVEN_REPOSITORY$/junit/junit/4.11/junit-4.11.jar!/org/junit/internal/runners/statements/RunAfters.class" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/beans.xml" />
         <option value="$PROJECT_DIR$/src/test/resources/arquillian.xml" />
@@ -273,7 +188,6 @@
         <option value="$PROJECT_DIR$/src/test/java/dao/UserDAOTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/dao/UserDAOMemoryImplTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/rest/KweetResourceTest.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/test/resources/test-persistence.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/indexx.xhtml" />
         <option value="$PROJECT_DIR$/src/main/webapp/index.jsp" />
@@ -306,9 +220,11 @@
         <option value="$PROJECT_DIR$/src/main/java/dao/KweetDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/dao/KweetDAOMemoryImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/services/KweetService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/rest/KweetResource.java" />
         <option value="$PROJECT_DIR$/src/main/java/model/Kweet.java" />
         <option value="$PROJECT_DIR$/src/main/java/bean/KweetOverviewManager.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/rest/KweetResource.java" />
+        <option value="$PROJECT_DIR$/src/main/java/servers/KweetServer.java" />
       </list>
     </option>
   </component>
@@ -339,6 +255,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -442,6 +360,14 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="servers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Kwetter" type="b2602c69:ProjectViewProjectNode" />
+              <item name="KwetterProject" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="services" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -477,6 +403,27 @@
             <path>
               <item name="Kwetter" type="b2602c69:ProjectViewProjectNode" />
               <item name="KwetterProject" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Kwetter" type="b2602c69:ProjectViewProjectNode" />
+              <item name="KwetterProject" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Kwetter" type="b2602c69:ProjectViewProjectNode" />
+              <item name="KwetterProject" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="dao" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Kwetter" type="b2602c69:ProjectViewProjectNode" />
+              <item name="KwetterProject" type="462c0819:PsiDirectoryNode" />
               <item name="target" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -487,15 +434,13 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/sdk" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554726565865" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1557817998334" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="Arquillian JUnit4" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path" value="C:/Program Files/nodejs/node" />
@@ -549,6 +494,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="WildFly Managed: All in KwetterProject" type="ArquillianJUnit" factoryName="" temporary="true" nameIsGenerated="true">
+      <module name="KwetterProject" />
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="WildFly Managed" />
+        </value>
+      </option>
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <option name="PARAMETERS" value="" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="WildFly Managed: KweetDAOImplTest" type="ArquillianJUnit" factoryName="" temporary="true" nameIsGenerated="true">
       <module name="KwetterProject" />
       <extension name="coverage" runner="jacoco">
@@ -573,30 +534,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="WildFly Managed: KweetDAOMemoryImplTest" type="ArquillianJUnit" factoryName="" temporary="true" nameIsGenerated="true">
-      <module name="KwetterProject" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="dao.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="WildFly Managed" />
-        </value>
-      </option>
-      <option name="PACKAGE_NAME" value="dao" />
-      <option name="MAIN_CLASS_NAME" value="dao.KweetDAOMemoryImplTest" />
-      <option name="METHOD_NAME" value="" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="" />
-      <option name="PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="WildFly Managed: KweetResourceTest" type="ArquillianJUnit" factoryName="" temporary="true" nameIsGenerated="true">
       <module name="KwetterProject" />
       <extension name="coverage">
@@ -612,30 +549,6 @@
       </option>
       <option name="PACKAGE_NAME" value="rest" />
       <option name="MAIN_CLASS_NAME" value="rest.KweetResourceTest" />
-      <option name="METHOD_NAME" value="" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="" />
-      <option name="PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="WildFly Managed: UserDAOImplTest" type="ArquillianJUnit" factoryName="" temporary="true" nameIsGenerated="true">
-      <module name="KwetterProject" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="dao.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="WildFly Managed" />
-        </value>
-      </option>
-      <option name="PACKAGE_NAME" value="dao" />
-      <option name="MAIN_CLASS_NAME" value="dao.UserDAOImplTest" />
       <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="" />
@@ -767,19 +680,17 @@
     </configuration>
     <list>
       <item itemvalue="Arquillian JUnit.WildFly Managed: KweetDAOImplTest" />
-      <item itemvalue="Arquillian JUnit.WildFly Managed: KweetDAOMemoryImplTest" />
-      <item itemvalue="Arquillian JUnit.WildFly Managed: UserDAOImplTest" />
       <item itemvalue="Arquillian JUnit.WildFly Managed: UserDAOMemoryImplTest" />
       <item itemvalue="Arquillian JUnit.WildFly Managed: KweetResourceTest" />
+      <item itemvalue="Arquillian JUnit.WildFly Managed: All in KwetterProject" />
       <item itemvalue="JBoss Server.Unnamed" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Arquillian JUnit.WildFly Managed: KweetDAOImplTest" />
+        <item itemvalue="Arquillian JUnit.WildFly Managed: All in KwetterProject" />
         <item itemvalue="Arquillian JUnit.WildFly Managed: KweetResourceTest" />
         <item itemvalue="Arquillian JUnit.WildFly Managed: UserDAOMemoryImplTest" />
-        <item itemvalue="Arquillian JUnit.WildFly Managed: UserDAOImplTest" />
-        <item itemvalue="Arquillian JUnit.WildFly Managed: KweetDAOMemoryImplTest" />
       </list>
     </recent_temporary>
   </component>
@@ -835,23 +746,13 @@
       <workItem from="1556001568645" duration="1964000" />
       <workItem from="1556174405807" duration="5986000" />
       <workItem from="1556969988398" duration="4057000" />
-      <workItem from="1557471575978" duration="11764000" />
+      <workItem from="1557471575978" duration="15062000" />
+      <workItem from="1557819915348" duration="108000" />
+      <workItem from="1558210895967" duration="9479000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="WildFly_Managed__KweetDAOImplTest - 2019.03.11 at 09h 10m 23s.xml">
-      <configuration name="WildFly Managed: KweetDAOImplTest" configurationId="ArquillianJUnit" />
-    </history-entry>
-    <history-entry file="WildFly_Managed__KweetDAOImplTest - 2019.03.11 at 09h 13m 49s.xml">
-      <configuration name="WildFly Managed: KweetDAOImplTest" configurationId="ArquillianJUnit" />
-    </history-entry>
-    <history-entry file="WildFly_Managed__KweetDAOImplTest - 2019.03.11 at 10h 14m 20s.xml">
-      <configuration name="WildFly Managed: KweetDAOImplTest" configurationId="ArquillianJUnit" />
-    </history-entry>
-    <history-entry file="WildFly_Managed__KweetResourceTest - 2019.03.03 at 17h 25m 28s.xml">
-      <configuration name="WildFly Managed: KweetResourceTest" configurationId="ArquillianJUnit" />
-    </history-entry>
     <history-entry file="WildFly_Managed__KweetResourceTest - 2019.03.03 at 17h 26m 05s.xml">
       <configuration name="WildFly Managed: KweetResourceTest" configurationId="ArquillianJUnit" />
     </history-entry>
@@ -870,17 +771,28 @@
     <history-entry file="WildFly_Managed__KweetResourceTest - 2019.03.03 at 17h 49m 01s.xml">
       <configuration name="WildFly Managed: KweetResourceTest" configurationId="ArquillianJUnit" />
     </history-entry>
+    <history-entry file="All_in_KwetterProject - 2019.05.13 at 12h 25m 53s.xml">
+      <configuration name="All in KwetterProject" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="WildFly_Managed__All_in_KwetterProject - 2019.05.13 at 12h 28m 15s.xml">
+      <configuration name="WildFly Managed: All in KwetterProject" configurationId="ArquillianJUnit" />
+    </history-entry>
+    <history-entry file="KweetDAOTest - 2019.05.13 at 12h 28m 53s.xml">
+      <configuration name="KweetDAOTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="WildFly_Managed__KweetDAOImplTest - 2019.05.13 at 12h 30m 00s.xml">
+      <configuration name="WildFly Managed: KweetDAOImplTest" configurationId="ArquillianJUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="221540000" />
+    <option name="totallyTimeSpent" value="234425000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.7145161" visible="true" weight="0.19083156" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.71397614" visible="true" weight="0.19509594" />
       <window_info id="Structure" order="1" weight="0.25" />
-      <window_info id="Persistence" order="2" sideWeight="0.28548387" side_tool="true" visible="true" weight="0.19083156" />
+      <window_info id="Persistence" order="2" sideWeight="0.28602383" side_tool="true" visible="true" weight="0.19509594" />
       <window_info id="Designer" order="3" />
       <window_info id="Image Layers" order="4" />
       <window_info id="UI Designer" order="5" />
@@ -889,7 +801,7 @@
       <window_info id="Web" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32979852" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32827735" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32827735" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39869988" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -975,7 +887,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/rest/KweetResource.java</url>
-          <line>113</line>
+          <line>120</line>
           <properties />
           <option name="timeStamp" value="101" />
         </line-breakpoint>
@@ -1003,24 +915,6 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/faces-config.xml">
-      <provider editor-type-id="com.intellij.jsf.yfilesGraph.editor.FacesNavigationFileEditorProvider" />
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/kweetOverview.xhtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="21" column="89" selection-start-line="21" selection-start-column="89" selection-end-line="21" selection-end-column="89" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/login.xhtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="15" column="70" selection-start-line="15" selection-start-column="70" selection-end-line="15" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/src.zip!/javax/security/auth/Subject.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="173">
@@ -1245,20 +1139,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/rest/AuthenticationResource.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="12">
-          <caret line="61" column="28" selection-start-line="61" selection-start-column="28" selection-end-line="61" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dto/KweetDTO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="15" column="56" selection-start-line="15" selection-start-column="56" selection-end-line="15" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="675">
@@ -1277,13 +1157,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/dao/KweetDAOTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="392">
-          <caret line="106" column="66" selection-start-line="106" selection-start-column="66" selection-end-line="106" selection-end-column="66" />
         </state>
       </provider>
     </entry>
@@ -1339,31 +1212,38 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/services/UserService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="132">
-          <caret line="23" column="18" lean-forward="true" selection-start-line="23" selection-start-column="18" selection-end-line="23" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/services/KweetService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="292">
-          <caret line="41" column="45" selection-start-line="41" selection-start-column="45" selection-end-line="41" selection-end-column="45" />
+          <caret line="23" column="18" selection-start-line="23" selection-start-column="18" selection-end-line="23" selection-end-column="18" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/rest/UserResource.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
+        <state relative-caret-position="280">
+          <caret line="29" selection-start-line="29" selection-end-line="29" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/rest/KweetResource.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/dao/KweetDAOTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="82" column="54" lean-forward="true" selection-start-line="82" selection-start-column="54" selection-end-line="82" selection-end-column="54" />
+        <state relative-caret-position="400">
+          <caret line="28" selection-start-line="28" selection-end-line="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/dao/KweetDAOImplTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/bean/KweetOverviewManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="520">
+          <caret line="38" column="43" selection-start-line="38" selection-start-column="43" selection-end-line="38" selection-end-column="43" />
         </state>
       </provider>
     </entry>
@@ -1378,40 +1258,54 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/bean/KweetOverviewManager.java">
+    <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="38" column="43" selection-start-line="38" selection-start-column="43" selection-end-line="38" selection-end-column="43" />
+        <state relative-caret-position="352">
+          <caret line="254" selection-start-line="254" selection-end-line="254" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/model/Kweet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="15" column="135" selection-start-line="15" selection-start-column="135" selection-end-line="15" selection-end-column="135" />
+        <state relative-caret-position="300">
+          <caret line="25" selection-start-line="25" selection-end-line="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dto/KweetDTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="7" column="26" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/rest/AuthenticationResource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="800">
+          <caret line="61" column="28" selection-start-line="61" selection-start-column="28" selection-end-line="61" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/services/KweetService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="41" column="45" selection-start-line="41" selection-start-column="45" selection-end-line="41" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/rest/KweetResource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-908">
+          <caret line="41" column="40" selection-start-line="41" selection-start-column="40" selection-end-line="41" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/servers/KweetServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="355">
+          <caret line="36" column="45" selection-start-line="36" selection-start-column="45" selection-end-line="36" selection-end-column="45" />
           <folding>
-            <element signature="e#1095#1096#0" expanded="true" />
-            <element signature="e#1120#1121#0" expanded="true" />
-            <element signature="e#1201#1202#0" expanded="true" />
-            <element signature="e#1231#1232#0" expanded="true" />
-            <element signature="e#1277#1278#0" expanded="true" />
-            <element signature="e#1315#1316#0" expanded="true" />
-            <element signature="e#1352#1353#0" expanded="true" />
-            <element signature="e#1381#1382#0" expanded="true" />
-            <element signature="e#1420#1421#0" expanded="true" />
-            <element signature="e#1451#1452#0" expanded="true" />
-            <element signature="e#1499#1500#0" expanded="true" />
-            <element signature="e#1535#1536#0" expanded="true" />
-            <element signature="e#1587#1588#0" expanded="true" />
-            <element signature="e#1627#1628#0" expanded="true" />
-            <element signature="e#1658#1659#0" expanded="true" />
-            <element signature="e#1687#1688#0" expanded="true" />
-            <element signature="e#1729#1730#0" expanded="true" />
-            <element signature="e#1765#1766#0" expanded="true" />
-            <element signature="e#1799#1800#0" expanded="true" />
-            <element signature="e#1826#1827#0" expanded="true" />
-            <element signature="e#1869#1870#0" expanded="true" />
-            <element signature="e#1901#1902#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
