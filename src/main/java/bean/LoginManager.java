@@ -5,6 +5,7 @@ import dao.UserDAO;
 import dao.UserDAOImpl;
 import dto.RegisterDTO;
 import dto.UserDTO;
+import model.Role;
 import model.User;
 import services.UserService;
 
@@ -35,6 +36,14 @@ public class LoginManager {
     @PostConstruct
     void initUserDTO(){
         currentUser = new RegisterDTO();
+
+        if(userService.getUserByName("admin") == null) {
+            User user = new User();
+            user.setUsername("admin");
+            user.setPassword("admin");
+            user.setRole(Role.ADMIN);
+            userService.addUser(user);
+        }
     }
 
     public void login(){
@@ -42,6 +51,7 @@ public class LoginManager {
             LoginCallBackHandler loginCallBackHandler = new LoginCallBackHandler(currentUser);
             LoginContext lc = new LoginContext("jboss-security-api", loginCallBackHandler);
             FacesContext context = FacesContext.getCurrentInstance();
+
             lc.login();
             context.getExternalContext().redirect("userOverview.xhtml");
             context.getExternalContext().getSessionMap().put("user", currentUser.getUsername());

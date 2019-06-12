@@ -4,6 +4,7 @@ import dto.RegisterDTO;
 import dto.UserDTO;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
+import model.Role;
 import model.User;
 import security.KeyGenerator;
 import services.UserService;
@@ -64,6 +65,7 @@ public class AuthenticationResource {
             User user = new User();
             user.setUsername(registerDTO.getUsername());
             user.setPassword(registerDTO.getPassword());
+            user.setRole(Role.USER);
             userService.addUser(user);
 
             String token = issueToken(user.getUsername());

@@ -37,7 +37,12 @@ public class UserDAOImpl implements UserDAO {
     }
 
     public User getUserByName(String name){
-        return em.createNamedQuery("User.getUserByName", User.class).setParameter("name", name).getSingleResult();
+        try {
+            return em.createNamedQuery("User.getUserByName", User.class).setParameter("name", name).getSingleResult();
+        }
+        catch (Exception e){
+            return null;
+        }
     }
 
     public void followUser(User currentUser, User userToBeFollowed){

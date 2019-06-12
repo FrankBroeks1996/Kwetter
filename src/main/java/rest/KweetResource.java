@@ -3,7 +3,6 @@ package rest;
 import dto.KweetDTO;
 import model.Kweet;
 import model.User;
-import org.jboss.logging.annotations.Pos;
 import security.JWTTokenNeeded;
 import servers.KweetServer;
 import services.KweetService;
